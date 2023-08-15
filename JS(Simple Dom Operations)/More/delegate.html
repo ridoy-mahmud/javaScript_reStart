@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>This is About Delegate</h2>
+        <ul id="item_container">
+            <li class="item">Lorem, ipsum dolor.1</li>
+            <li class="item">Lorem, ipsum dolor.2</li>
+            <li class="item">Lorem, ipsum dolor.3</li>
+            <li class="item">Lorem, ipsum dolor.4</li>
+            <li class="item">Lorem, ipsum dolor.5</li>
+        </ul>
+        <button id="add_item">Add New</button>
+    </div>
+
+    <script>
+        // Set Event in a Child Element
+        // let elements = document.getElementsByClassName("item");
+        // for (let element of elements) {
+        //     element.addEventListener("click", function (event) {
+        //         console.log(event.target.parentNode);
+        //         //Remove Element or Remove Chile Element from an list or obj
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        // Set Event in a parent element
+
+        document.getElementById("item_container").addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+
+        document.getElementById("add_item").addEventListener("click", function (event) {
+            const newElement = document.getElementById("item_container");
+            const li = document.createElement("li")
+            li.innerText = "lorem ipsum set ament moris de nuek auer";
+            newElement.appendChild(li);
+
+        })
+
+    </script>
+    <script src="/delegate.js"></script>
+</body>
+
+</html>

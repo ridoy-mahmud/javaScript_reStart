@@ -1,5 +1,6 @@
 document.getElementById('confirm_del').addEventListener("keyup", function (event) {
     const text = event.target.value;
+    console.log(text);
     const deleteBtn = document.getElementById("delete_btn");
     if (text == "delete") {
         deleteBtn.removeAttribute("disabled");
